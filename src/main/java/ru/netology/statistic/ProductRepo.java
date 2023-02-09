@@ -32,8 +32,7 @@ public class ProductRepo {
                 idCount++;
             }
         }
-        Product e = findById(id);
-        if (e == null) {
+        if (idCount == 0) {
             throw new NotFoundException(
                     "Element with id: " + id + " not found"
             );
